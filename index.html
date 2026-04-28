@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayao Miyazaki Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { 
+            background-color: #fcfaf2; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        .main-portrait { 
+            width: 100%; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 5px solid white;
+        }
+        .ramen-section {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px dashed #ccc;
+        }
+        .ramen-section img { 
+            width: 100%; 
+            border-radius: 5px;
+        }
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .accordion-button {
+            background-color: #f1f5f0 !important;
+            color: #4a6741 !important;
+            font-weight: bold;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #4a6741 !important;
+            color: white !important;
+        }
+        .accordion-body {
+            background-color: #ffffff;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-5 mb-4">
+            <img src="miyazaki_portrait.jpg" alt="Hayao Miyazaki" class="main-portrait">
+        </div>
+
+        <div class="col-md-7">
+            <h1 class="fw-bold">Hayao Miyazaki</h1>
+            <p class="text-muted fs-4">Legendary Animator</p>
+            
+            <p class="mt-4">
+                Hayao Miyazaki is a world-renowned Japanese animator, director, producer, screenwriter, and manga artist. 
+                He is the co-founder of Studio Ghibli and has created some of the most beloved animated films.
+            </p>
+
+            <div class="ramen-section my-4">
+                <h6 class="text-primary text-uppercase">Ghibli Kitchen</h6>
+                <p class="small">Hayao Miyazaki making ramen</p>
+                <img src="ramen_making.jpg" alt="Miyazaki Cooking">
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-sm-6">
+                    <h5 class="fw-bold">Achievements</h5>
+                    <ul class="list-unstyled">
+                        <li>- Spirited Away (Oscar Winner)</li>
+                        <li>- Totoro (Cultural Icon)</li>
+                        <li>- Lifetime Achievement Award</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <h5 class="fw-bold">Major Awards</h5>
+                    <ul class="list-unstyled">
+                        <li>Award: Academy Award</li>
+                        <li>Award: Golden Bear</li>
+                        <li>Award: Honorary Oscar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion" id="miyaAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panel1">
+                            Artistic Philosophy
+                        </button>
+                    </h2>
+                    <div id="panel1" class="accordion-collapse collapse show" data-bs-parent="#miyaAccordion">
+                        <div class="accordion-body">
+                            His works often explore the complex relationship between humans, nature, and technology.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel2">
+                            The Ghibli Era
+                        </button>
+                    </h2>
+                    <div id="panel2" class="accordion-collapse collapse" data-bs-parent="#miyaAccordion">
+                        <div class="accordion-body">
+                            Founded in 1985, Studio Ghibli has redefined animation for audiences around the world.
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
